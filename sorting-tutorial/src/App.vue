@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <b-navbar  toggleable="lg" type="dark" variant="success">
+      <b-navbar-brand to="/">Sort Tutorial</b-navbar-brand>
+      <b-navbar-nav>
+        <b-nav-item to="/quicksort">Quicksort</b-nav-item>
+        <b-nav-item to="/bubblesort">Bubblesort</b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
+    <b-container>
+      <router-view/>
+    </b-container>
   </div>
 </template>
 
