@@ -33,24 +33,31 @@
       </b-button>
     </b-form>
     <b-container v-if="submitted">
-      <p>Bubble sort is a kind of simple sort. It sorts array from the beginning to the end and each iteration.<br> It will iterate
+      <p>Bubble sort is a kind of simple sort. It sorts array from the beginning to the end for each iteration.<br> There will be double
+        loop and at the first loop, it will iterate 
         (n - 1) times no matter what. n = the array length. At each iteration, the algorithm will scan the whole array from the
         beginning to the end, if element &lt; element at the next index, then swap them. Each iteration will also chek n - 1 times.
         At the "optimized" version, each iteration will only loop (n - i - 1) times, because each iteration will make the element at
         (n - i - 1) the smallest element</p>
       <h2>Sorting steps for array : {{ numbers }} : </h2>
-      <b-list-group class="align-items-start">
-        <b-list-group-item 
+      <b-list-group>
+        <b-list-group-item
           v-for="(step, index) in steps"
           :key="index">
             <h4>{{ index + 1 }}. Swap ({{ step.first }} , {{ step.second }}).</h4>
-            <p> At iteration number {{ step.iteration + 1 }}, swap them because {{ step.first }} &lt; {{ step.second }} <br>
+            <p > At iteration - {{ step.iteration + 1 }}, swap them because {{ step.first }} &lt; {{ step.second }} <br>
               Current Array : {{ step.currentArray }}</p>
         </b-list-group-item>
       <b-list-group-item variant="success">
-        <h4>{{ totalNumber }}. Done! The sorted array is {{ sortedNumbers }}</h4>
+        <h4>{{ steps.length + 1 }}. Done!</h4>
+        <p> The sorted array is {{ sortedNumbers }}</p>
       </b-list-group-item>
+      <br>
       </b-list-group>
+      <h4>Complexity : O(n<sup>2</sup>)</h4>
+      <p>You can hit the 
+        <b-button @click="reset" variant="danger">Reset</b-button> 
+        button to start the input process again</p>
     </b-container>
   </div>
 </template>
