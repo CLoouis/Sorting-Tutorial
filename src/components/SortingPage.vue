@@ -1,8 +1,8 @@
 /* eslint-disable */
 <template>
   <div>
-    <h1>BubbleSort : Enter your numbers here (max 10)</h1>
-    <b-form @submit.prevent="sortNumbersAndGetSteps">
+    <h1>{{ title }} : Enter your numbers here (max 10)</h1>
+    <b-form @submit.prevent="submitNumbers">
       <b-form-group id="input-group-2" :label='getTotalNumberLabel()' label-for="input-2">
         <b-form-input
           id="numberInput"
@@ -32,20 +32,22 @@
       </b-button>
     </b-form>
     <b-container v-if="submitted">
-      <p>Bubble sort is a kind of brute force algorithm. It sorts array from the beginning to the end for each iteration.<br> 
-        There will be double loop and at the first loop, it will iterate 
-        (n - 1) times no matter what. n = the array length. At each iteration, the algorithm will scan the whole array from the
-        beginning to the end, if element &lt; element at the next index, then swap them. Each iteration will also chek n - 1 times.
-        At the "optimized" version, each iteration will only loop (n - i - 1) times, because each iteration will make the element at
-        (n - i - 1) the smallest element</p>
+      <p>Quick sort is a kind of divide and conquer algorithm. It sorts array by choosing a pivot, <br>
+        that is an element of the array, then make every higher element on the left side of the pivot,
+        and the smaller element on the right side of the pivot. Then the function calls itself to sort
+        the left part and the right part of the pivot, so the reccursion is done twice, until there are
+        only one element, then it returns the element. <br>
+        There are a lot of choice for choosing the pivot, and for sorting the left and right side of
+        the pivot. At this tutorial, we will choose the pivot as the first element. If there is only one
+        element left, the function will stop
+      </p>
       <h2>Sorting steps for array : {{ numbers }} : </h2>
       <b-list-group>
         <b-list-group-item
           v-for="(step, index) in steps"
           :key="index">
-            <h4>{{ index + 1 }}. Swap ({{ step.first }} , {{ step.second }}).</h4>
-            <p > At iteration - {{ step.iteration + 1 }}, swap them because {{ step.first }} &lt; {{ step.second }} <br>
-              Current Array : {{ step.currentArray }}</p>
+            <h4>{{ index + 1 }}. step.title</h4>
+            <p >step.text</p>
         </b-list-group-item>
       <b-list-group-item variant="success">
         <h4>{{ steps.length + 1 }}. Done!</h4>
@@ -53,7 +55,8 @@
       </b-list-group-item>
       <br>
       </b-list-group>
-      <h4>Complexity : O(n<sup>2</sup>)</h4>
+      <h4>Complexity : 
+        <span v-html="complexity"></span></h4>
       <p>You can hit the 
         <b-button @click="reset" variant="danger">Reset</b-button> 
         button to start the input process again</p>
@@ -63,22 +66,28 @@
 
 <script>
 export default {
+  props: {
+    complexity: String,
+    steps: Array,
+    title: String,
+    sortedNumbers: Array
+  },
+  watch: {
+    sortedNumbers() {
+      this.submitted = true;
+    }
+  },
   data() {
     return {
       numbers: [],
       totalNumber: 0,
-      sortedNumbers: [],
       submitted: false,
-      steps: [],
       formData: {
         number: null
       }
     }
   },
   methods: {
-    capitalizeFirst(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    },
     addNumber() {
       const number = this.formData.number
       this.numbers.push(parseInt(number))
@@ -98,24 +107,8 @@ export default {
       this.formData.number = null
       this.submitted = false
     },
-    sortNumbersAndGetSteps() {
-      this.sortedNumbers = [...this.numbers];
-      for (let i = 0 ; i < this.totalNumber - 1 ; i++) {
-        for (let j = 0 ; j < this.totalNumber - i - 1 ; j++) {
-          if (this.sortedNumbers[j] < this.sortedNumbers[j+1]) {
-            let temp = this.sortedNumbers[j]
-            this.sortedNumbers[j] = this.sortedNumbers[j + 1]
-            this.sortedNumbers[j + 1] = temp
-            this.steps.push({
-              first  : this.sortedNumbers[j + 1],
-              second : this.sortedNumbers[j],
-              currentArray : [...this.sortedNumbers],
-              iteration : i
-            })
-          }
-        }
-      }
-      this.submitted = true;
+    submitNumbers() {
+      this.$emit('numberSubmitted', this.numbers)
     }
   },
   mounted() {

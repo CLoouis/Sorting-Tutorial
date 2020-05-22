@@ -2,7 +2,7 @@
 <template>
   <div>
     <h1>Quicksort : Enter your numbers here (max 10)</h1>
-    <b-form @submit.prevent="addNumber">
+    <b-form @submit.prevent="sortNumbersAndGetSteps">
       <b-form-group id="input-group-2" :label='getTotalNumberLabel()' label-for="input-2">
         <b-form-input
           id="numberInput"
@@ -13,10 +13,9 @@
         ></b-form-input>
       </b-form-group>
       <b-button
-        type="submit"
         variant="primary"
         :disabled="numbers.length >= 10 || submitted || formData.number === null"
-        >
+        @click="addNumber">
           Add Number
       </b-button>
       <b-button
@@ -26,9 +25,9 @@
           Reset
       </b-button>
       <b-button
+        type="submit"
         variant="success"
-        :disabled="numbers.length === 0 || submitted"
-        @click="sortNumbersAndGetSteps">
+        :disabled="numbers.length === 0 || submitted">
           Sort Numbers
       </b-button>
     </b-form>
