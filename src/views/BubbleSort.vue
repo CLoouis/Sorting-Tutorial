@@ -33,8 +33,8 @@
       </b-button>
     </b-form>
     <b-container v-if="submitted">
-      <p>Bubble sort is a kind of simple sort. It sorts array from the beginning to the end for each iteration.<br> There will be double
-        loop and at the first loop, it will iterate 
+      <p>Bubble sort is a kind of brute force algorithm. It sorts array from the beginning to the end for each iteration.<br> 
+        There will be double loop and at the first loop, it will iterate 
         (n - 1) times no matter what. n = the array length. At each iteration, the algorithm will scan the whole array from the
         beginning to the end, if element &lt; element at the next index, then swap them. Each iteration will also chek n - 1 times.
         At the "optimized" version, each iteration will only loop (n - i - 1) times, because each iteration will make the element at
