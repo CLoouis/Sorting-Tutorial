@@ -1,22 +1,25 @@
 <template>
   <div class="home">
-    <b-jumbotron bg-variant="info">
-      <template v-slot:header>Welcome to Sorting Tutorial</template>
+    <img class="home-image" src="@/assets/images/computer.jpg" alt="Responsive image">
+    <div class="header">
+      <h1 class="title">Welcome to Sorting Tutorial</h1>
 
-      <template v-slot:lead>
-        Choose what kind of sorting you want to do, sorting numbers will be done in descending order
-      </template>
+      <h3 class="subtitle">
+        Choose what kind of sorting you want to learn, sorting numbers will be done in descending order.<br>
+        This application is made using vue.js and some of the algorithm is referenced from geeksforgeeks.com
+        , do check them out! Get started by clicking one of those buttons
+      </h3>
 
       <hr class="my-4">
-
-      <b-button variant="primary" to="/quicksort">Quick Sort</b-button>
-      <b-button variant="success" to="/bubblesort">Bubble Sort</b-button>
-    </b-jumbotron>
+      <b-container horizontal>
+        <b-button variant="primary" to="/quicksort">Quick Sort</b-button>
+        <b-button variant="success" to="/bubblesort">Bubble Sort</b-button>
+      </b-container>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
   name: 'Home',

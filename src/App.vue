@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <b-navbar  toggleable="lg" type="dark" variant="success">
+    <b-navbar  toggleable="lg" type="dark" variant="success" >
       <b-navbar-brand to="/">Sort Tutorial</b-navbar-brand>
       <b-navbar-nav>
         <b-nav-item to="/quicksort">Quicksort</b-nav-item>
         <b-nav-item to="/bubblesort">Bubblesort</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-container>
-      <router-view/>
-    </b-container>
+    <router-view/>
   </div>
 </template>
 

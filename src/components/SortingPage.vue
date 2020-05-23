@@ -1,8 +1,11 @@
-/* eslint-disable */
 <template>
-  <div>
-    <h1>{{ title }} : Enter your numbers here (max 10)</h1>
-    <b-form @submit.prevent="submitNumbers">
+  <b-container>
+    <h1>{{ title }} : Enter your numbers below (max 10) </h1>
+    <p>You can click the button &quot;add number&quot; or just press enter for every number
+      , also remember to put at least more than 1 element.</p>
+    <!-- Note to my future self: DONT CHANGE THE ADD NUMBER TO SUBMITNUMBER, because then if you
+      want to submit, it needs the box to be filled, and it does not make sense-->
+    <b-form @submit.prevent="addNumber">
       <b-form-group id="input-group-2" :label='getTotalNumberLabel()' label-for="input-2">
         <b-form-input
           id="numberInput"
@@ -14,8 +17,8 @@
       </b-form-group>
       <b-button
         variant="primary"
-        :disabled="numbers.length >= 10 || submitted || formData.number === null"
-        @click="addNumber">
+        type="submit"
+        :disabled="numbers.length >= 10 || submitted || formData.number === null">
           Add Number
       </b-button>
       <b-button
@@ -25,57 +28,57 @@
           Reset
       </b-button>
       <b-button
-        type="submit"
         variant="success"
-        :disabled="numbers.length === 0 || submitted">
+        :disabled="numbers.length === 0 || submitted"
+        @click="submitNumbers">
           Sort Numbers
       </b-button>
     </b-form>
-    <b-container v-if="submitted">
-      <p>Quick sort is a kind of divide and conquer algorithm. It sorts array by choosing a pivot, <br>
-        that is an element of the array, then make every higher element on the left side of the pivot,
-        and the smaller element on the right side of the pivot. Then the function calls itself to sort
-        the left part and the right part of the pivot, so the reccursion is done twice, until there are
-        only one element, then it returns the element. <br>
-        There are a lot of choice for choosing the pivot, and for sorting the left and right side of
-        the pivot. At this tutorial, we will choose the pivot as the first element. If there is only one
-        element left, the function will stop
-      </p>
-      <h2>Sorting steps for array : {{ numbers }} : </h2>
-      <b-list-group>
+    <div class="mt-3 flex-row d-flex justify-content-start">
+      <div class="p-2">
+        <b-button
+          @click="showNumbers = !showNumbers">
+          Toggle Numbers
+        </b-button>
+      </div>
+      <b-list-group horizontal v-if="showNumbers">
+        <p v-if="numbers.length === 0">Empty number array</p>
         <b-list-group-item
-          v-for="(step, index) in steps"
+          v-for="(number, index) in numbers"
           :key="index">
-            <h4>{{ index + 1 }}. step.title</h4>
-            <p >step.text</p>
+          {{number}}
         </b-list-group-item>
-      <b-list-group-item variant="success">
-        <h4>{{ steps.length + 1 }}. Done!</h4>
-        <p> The sorted array is {{ sortedNumbers }}</p>
-      </b-list-group-item>
-      <br>
       </b-list-group>
+    </div>
+    <b-container v-if="submitted">
+      <p> {{ algorithmDescription }} </p>
+      <h2>Sorting steps for array {{ numbers }} : </h2>
+      <DescriptionBox
+        :steps="steps"
+        :sortedNumbers="sortedNumbers"
+      />
       <h4>Complexity : 
         <span v-html="complexity"></span></h4>
       <p>You can hit the 
         <b-button @click="reset" variant="danger">Reset</b-button> 
         button to start the input process again</p>
     </b-container>
-  </div>
+  </b-container>
 </template>
 
 <script>
+import DescriptionBox from '@/components/DescriptionBox.vue'
+
 export default {
-  props: {
-    complexity: String,
-    steps: Array,
-    title: String,
-    sortedNumbers: Array
+  components: {
+    DescriptionBox
   },
-  watch: {
-    sortedNumbers() {
-      this.submitted = true;
-    }
+  props: {
+    algorithmDescription: String,
+    complexity: String,
+    title: String,
+    steps: Array,
+    sortedNumbers: Array
   },
   data() {
     return {
@@ -84,7 +87,8 @@ export default {
       submitted: false,
       formData: {
         number: null
-      }
+      },
+      showNumbers: false,
     }
   },
   methods: {
@@ -109,6 +113,7 @@ export default {
     },
     submitNumbers() {
       this.$emit('numberSubmitted', this.numbers)
+      this.submitted = true
     }
   },
   mounted() {
