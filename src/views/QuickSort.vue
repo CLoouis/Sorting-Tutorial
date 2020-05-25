@@ -24,7 +24,7 @@ export default {
       steps: [],
       algorithmDescription: "Quick sort is a kind of divide and conquer algorithm. It \
       sorts array by choosing a pivot, <br>that is an element of the array, then make \
-      every higher element on the left side of the pivot,and the smaller element on the\
+      every higher element on the left side of the pivot,and the smaller element on the \
       right side of the pivot. Then the function calls itself to sort the left part and \
       the right part of the pivot, so the reccursion is done twice, until there are \
       only one element, then it returns the element. <br> There are a lot of choice for \

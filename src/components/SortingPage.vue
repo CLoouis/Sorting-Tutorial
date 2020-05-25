@@ -51,7 +51,7 @@
       </b-list-group>
     </div>
     <b-container v-if="submitted">
-      <p> {{ algorithmDescription }} </p>
+      <p v-html="algorithmDescription"></p>
       <h2>Sorting steps for array {{ numbers }} : </h2>
       <DescriptionBox
         :steps="steps"
