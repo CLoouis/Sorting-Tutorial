@@ -4,6 +4,7 @@
       {{ errorMsg }}
     </b-alert>
     <h2>Bubble Sort</h2>
+    <span>Kompleksitas: O( n<sup>2</sup> ) </span>
     <div>
       <b-form-input
         v-model="value"
@@ -143,6 +144,7 @@ export default {
     },
     go() {
       this.steps = []
+      this.currentStep = 0
       this.createList()
       this.bubbleSort()
     }
@@ -164,15 +166,6 @@ li {
 }
 a {
   color: #4289b9;
-}
-
-span {
-  border: solid 1px;
-  margin: 10px;
-  padding: 0 10px;
-  border-radius: 10px;
-  margin-right: 5px;
-  margin-bottom: 10px;
 }
 
 .selected1 {

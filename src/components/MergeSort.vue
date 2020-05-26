@@ -5,6 +5,7 @@
     </b-alert>
     <h2>Merge Sort</h2>
     <div>
+      <span>Kompleksitas: O( n log(n) ) </span>
       <b-form-input
         v-model="value"
         class="input"

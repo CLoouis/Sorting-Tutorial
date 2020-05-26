@@ -46,8 +46,16 @@ text {
 }
 
 .input {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
   max-width:20rem;
+}
+
+span {
+  border: solid 1px;
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 </style>
