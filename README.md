@@ -12,8 +12,8 @@ Client dependency in `package.json`
 ## How To Use
 In this directory (root), run:
 ```
-npm i
-npm run serve
+$ npm i
+$ npm run serve
 ```
 
 ## Disclaimer
