@@ -16,5 +16,8 @@ $ npm i
 $ npm run serve
 ```
 
+## Credits
+Thank to Vue, Bootstrap-Vue, Ian Leow Tze Wei, W3Schools, D3, and all of you that support me.
+
 ## Disclaimer
 This is part for personal use
