@@ -24,14 +24,43 @@
     </div>
     <button v-if="steps.length > 0" :disabled="currentStep == 0" @click="currentStep--">Prev</button>
     <button v-if="steps.length > 0" :disabled="currentStep == steps.length - 1" @click="currentStep++">Next</button>
+
+    <footer class="mt-4 mb-4">
+      Made with <BIconHeartFill />
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/ilhamsyahids/"
+            target="_blank"
+            rel="noopener"
+          >
+            <font-awesome-icon size="lg" :icon="['fab', 'linkedin']" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://ilhamsyahids.codes/"
+            target="_blank"
+            rel="noopener"
+          >
+            <b-icon-person-fill />
+          </a>
+        </li>
+      </ul>
+    </footer>
   </div>
 </template>
 
 <script>
+import { BIconPersonFill, BIconHeartFill } from 'bootstrap-vue'
 import Step from '../utils/Step'
 
 export default {
   name: "BubbleSort",
+  components: {
+    BIconPersonFill,
+    BIconHeartFill
+  },
   data() {
     return {
       value: '',
@@ -124,6 +153,17 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #4289b9;
 }
 
 span {
