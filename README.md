@@ -19,8 +19,8 @@ $ sudo docker run -d --name flask-vue -e "PORT=8765" -p 8007:8765 web:latest
 4. Buka alamat http://localhost:8007/
 5. Jika sudah selesai, jalankan command berikut di terminal tadi
 ```
-sudo docker stop flask-vue
-sudo docker rm flask-vue
+$ sudo docker stop flask-vue
+$ sudo docker rm flask-vue
 ```
 
 ## Testing
