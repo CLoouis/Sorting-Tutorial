@@ -6,16 +6,26 @@ Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah 
 ### Prerequisites
 * docker
 * web browser
+* python3
 
 ### Installation for **LINUX**
-1. Buka terminal di directory ini (root)
+1. Buka terminal di directory server
 2. Jalankan command berikut:
+```
+$ python3.7 -m venv env
+$ source env/bin/activate
+(env)$ pip install -r requirements.txt
+(env)$ python app.py
+```
+
+3. Buka terminal di directory ini (root)
+4. Jalankan command berikut:
 ```
 $ docker build -t web:latest .
 $ docker run -d --name flask-vue -e "PORT=8765" -p 8007:8765 web:latest
 ```
-3. Buka broswer (disarankan chrome atau mozilla firefox)
-4. Buka alamat http://localhost:8007/
+5. Buka broswer (disarankan chrome atau mozilla firefox)
+6. Buka alamat http://localhost:8007/
 
 ## Testing
 1. Pilih tab Bubble Sort atau Merge Sort
