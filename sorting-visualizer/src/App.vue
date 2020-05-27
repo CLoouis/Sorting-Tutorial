@@ -1,22 +1,17 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Bubble Sort Visualizer App"/>
-    <InputForm />
-    <Result />
+    <HomePage />
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
-  import InputForm from './components/InputForm.vue'
-  import Result from './components/Result.vue'
+  
+  import HomePage from './components/HomePage.vue'
 
   export default {
     name: 'App',
     components: {
-      HelloWorld,
-      InputForm,
-      Result
+      HomePage
     }
   }
 </script>
