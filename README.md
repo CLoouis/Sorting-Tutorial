@@ -1,24 +1,42 @@
-# Sorting-Tutorial
-Berikut ini merupakan salah satu project yang menjadi bagian dari seleksi asisten IRK 2018
-## Latar Belakang
-Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah banyak algoritma untuk sorting yang telah dikembangkan di seluruh dunia. Untuk membantu orang - orang memahami berbagai algoritma sorting, tercetuslah ide untuk membuat sebuah website yang memberikan pemahaman mengenai algoritma sorting. Harapannya, website ini dapat dikembangkan lebih lanjut untuk pembelajaran strategi algoritma yang lain seperti Divide & Conquer, Dynamic Programming, dll
-## Spesifikasi
-Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
- 1. Pengguna dapat memilih jenis algoritma sorting yang digunakan. Pilihan yang tersedia ialah sebagai berikut : 
-	* Bubble Sort (200 poin)
-	* Merge Sort (300 poin)
- 2. Pengguna dapat melihat langkah - langkah dari algoritma sorting yang digunakan hingga hasil terurut
- 3. Masukan pengguna berupa kumpulan bilangan bulat positif. Maksimum banyaknya bilangan yang diurutkan adalah 10
- 4. Pengguna dapat mengetahui informasi mengenai kompleksitas algoritma yang digunakan
- 5. Teknologi dan bahasa pemrograman bebas untuk back-end, dan untuk front-end dibuat semenarik mungkin dengan menggunakan **React.js** atau **Vue.js**
- 6. Pastikan Readme ini diganti dengan Readme untuk project yang kalian buat (dibuat sejelas mungkin) !
- 
- **Keterangan** : Pilihan algoritma sewaktu - waktu dapat ditambahkan dan akan diumumkan
-## Penilaian
-Nilai maksimum adalah 1500. Berbagai aspek yang akan dinilai ialah
- 1. Kebenaran fungsionalitas program
- 2. UI
-3. Clean Code (termasuk struktur repository)
+# Sorting Web
+Sorting web will helps you to sort your numbers. This application was made by Felicia Gillian Tekad Tuerah...
 
-## Bonus (500 poin)
-Gunakan **Docker** dan **Deploy** website yang sudah selesai dibuat.
+## Installation
+### Requirements
+Some packages you need to install on your machine:
+1. Python 3.0 or above
+2. Flask 
+3. Flask Cors
+4. React
+5. Node js
+
+### How to compile on Windows?
+1. Open 2 cmd (to run react as frontend and flask as backend)
+#### How to run React?
+1. Open sort-web folder
+```
+cd src
+```
+2. Start react
+```
+npm start
+```
+#### How to run flask?
+1. Open backend folder
+```
+cd backend
+```
+2. set flask app
+```
+set FLASK_APP=mainSort.py
+```
+3. set flask environment
+```
+set FLASK_ENV=development
+```
+4. run your backend
+```
+flask run
+```
+
+### How to compile on Linux?
