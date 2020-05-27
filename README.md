@@ -9,7 +9,7 @@ Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah 
 
 ### Installation for **LINUX**
 1. Buka terminal di directory ini (root)
-2. Jalankan command docker
+2. Jalankan command berikut:
 ```
 $ docker build -t web:latest .
 $ docker run -d --name flask-vue -e "PORT=8765" -p 8007:8765 web:latest
