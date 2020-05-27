@@ -1,5 +1,15 @@
 # Sorting Web
-Sorting web will helps you to sort your numbers. This application was made by Felicia Gillian Tekad Tuerah...
+## Description
+Sorting web will helps you to sort your numbers.
+Sorting algorithm :
+1. Bubble Sort
+2. Merge Sort
+This application was made using react js for front-end and flask for back-end.
+
+## Author
+Name : Felicia Gillian Tekad Tuerah
+NIM : 13518070
+This application was made to fulfill the duties of the IRK Lab Assistant.
 
 ## Installation
 ### Requirements
@@ -45,5 +55,3 @@ set FLASK_ENV=development
 ```
 flask run
 ```
-
-### How to compile on Linux?
