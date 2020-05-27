@@ -1,14 +1,18 @@
 # Sorting Web
 ## Description
 Sorting web will helps you to sort your numbers.
+<br/>
 Sorting algorithm :
 1. Bubble Sort
 2. Merge Sort
+<br/>
 This application was made using react js for front-end and flask for back-end.
 
 ## Author
 Name : Felicia Gillian Tekad Tuerah
+<br/>
 NIM : 13518070
+<br/>
 This application was made to fulfill the duties of the IRK Lab Assistant.
 
 ## Installation
