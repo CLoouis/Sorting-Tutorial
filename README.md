@@ -6,7 +6,6 @@ Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah 
 ### Prerequisites
 * docker
 * web browser
-* python3
 
 ### Installation for **LINUX**
 1. Buka terminal di directory ini (root)
