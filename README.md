@@ -1,6 +1,6 @@
 # Sorting Web
 ## Description
-Sorting web will helps you to sort your numbers.
+Sorting web will help you to sort your numbers.
 <br/>
 Sorting algorithm :
 1. Bubble Sort
