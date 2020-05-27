@@ -18,8 +18,8 @@ $ docker run -d --name flask-vue -e "PORT=8765" -p 8007:8765 web:latest
 4. Buka alamat http://localhost:8007/
 
 ## Testing
-1. Pilih tab Bubble Sort atau MergeSort
-2. Masukkan angka (1 sampai 10 angka **integer**) pada field yang tersedia, angka dipisah dengan koma.
+1. Pilih tab Bubble Sort atau Merge Sort
+2. Masukkan angka (1 sampai 10 angka **integer**) pada field yang tersedia, angka dipisah dengan koma tanpa spasi.
 ```
 Contoh:
 3,1,-1,19
