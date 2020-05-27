@@ -1,0 +1,24 @@
+.App-hasil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: wheat;
+}
+.hasil-angka{
+    background-color: whitesmoke;
+    border: 1px solid #eee;
+    border-radius:8px;
+    padding: 1px;
+    width:200px;
+    height: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+    display: inline-table;
+    margin-right: 10px;
+}
+.tampilan-result{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+}
