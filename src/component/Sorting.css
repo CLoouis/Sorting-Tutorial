@@ -1,0 +1,20 @@
+
+        text {
+            fill: black;
+        }
+
+        rect {
+            fill:#00adb5;
+        }
+
+        .sorted {
+            fill: rgb(231, 85, 141);
+        }
+
+        .min {
+            fill: rgb(240, 248, 125);
+        }
+
+        .testing {
+            fill: rgb(119, 252, 252);
+        }

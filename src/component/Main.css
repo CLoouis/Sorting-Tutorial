@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Varela');
+.button {
+    background-color: #00adb5; /* Green */
+    border: none;
+    color: #EAE7DC;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.buttn {
+    background-color:#00adb5; /* Green */
+    border: none;
+    color: #EAE7DC;
+    padding: 10px 17.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+h2{
+    color:#00adb5;
+}
+p{
+    font-size: small;
+    margin-right: 50px;
+    color:#eae7dc;
+}
+
+    .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 27px;
+    overflow-x: hidden;
+    padding-top: 0px;
+}
+
+    .left {
+    left: 0;
+    background-color:hsl(216, 18%, 16%);
+    color:#EAE7DC;
+    margin-left: 0px;
+}
+
+    .right {
+    right: 0;
+    background-color:#eeeeee;
+    color: #393e46;
+    
+}
+
+body{
+    background-color:  #393e46;
+    font-family: Varela;
+}
+
+div {
+    margin-left: 20px;
+    margin-top: 40px;
+    
+}
