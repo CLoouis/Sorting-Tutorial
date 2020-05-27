@@ -10,7 +10,8 @@ class UserInput extends Component {
             algo: "BS",
             numbers: "",
             hasil: [],
-            isSubmit: false
+            isSubmit: false,
+            isError: false
         }
     }
     refreshPage = () => {
@@ -28,7 +29,8 @@ class UserInput extends Component {
                     'numbers': this.state.numbers,
                     'algo': this.state.algo
                 })
-            }).then(e => e.json()).then(data => this.setState({ hasil: data.data })).catch((err) => alert("Unvalid numbers :( Please enter the valid one !"))
+            }).then(e => e.json()).then(data => this.setState({ hasil: data.data })).catch((err) => { alert("Unvalid numbers :( Please enter the valid one !"); this.setState({ isError: true }) })
+
         } else {
             alert("Your not entering any numbers yet !")
         }
@@ -64,7 +66,8 @@ class UserInput extends Component {
     }
     render() {
         let komp;
-        if (this.state.isSubmit) {
+        console.log(this.state.isError)
+        if (this.state.isSubmit && !this.state.isError) {
             komp = <div className="block-komp"><p className="komp-header">Kompleksitas Waktu Algoritma</p><this.kompleksitas /><br></br></div>;
         } else {
             komp = <div></div>
@@ -117,6 +120,7 @@ class UserInput extends Component {
 
                         </div>
                         <br></br>
+                        {/* nampilin kompleksitas algoritma */}
                         <div>
                             {komp}
                         </div>
