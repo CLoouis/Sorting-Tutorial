@@ -38,7 +38,11 @@ make sure you have add the path C:\Windows\System32 and the path of nodejs insta
 cd sort-web
 ```
 #### How to run React?
-1. Start react
+1. Open frontend folder
+```
+cd frontend
+```
+2. Start react
 ```
 npm start
 ```
