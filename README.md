@@ -9,6 +9,7 @@ Some packages you need to install on your machine:
 3. Flask Cors
 4. React
 5. Node js
+6. npm
 
 ### How to compile on Windows?
 1. Open 2 cmd (to run react as frontend and flask as backend)

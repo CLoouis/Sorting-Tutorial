@@ -55,7 +55,7 @@ class UserInput extends Component {
     }
     kompleksitas = () => {
 
-        if (this.state.algo == "BS") {
+        if (this.state.algo === "BS") {
             return <this.kompBS />
         } else {
             return <this.kompMS />

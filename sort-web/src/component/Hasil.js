@@ -12,7 +12,6 @@ class Hasil extends Component {
     render() {
         return (
             <div>
-
                 <body className="App-hasil">
                     <p>Step {this.step} :</p>
                     <div className="hasil-angka">
