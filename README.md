@@ -2,23 +2,37 @@
 Berikut ini merupakan salah satu project yang menjadi bagian dari seleksi asisten IRK 2018
 ## Latar Belakang
 Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah banyak algoritma untuk sorting yang telah dikembangkan di seluruh dunia. Untuk membantu orang - orang memahami berbagai algoritma sorting, tercetuslah ide untuk membuat sebuah website yang memberikan pemahaman mengenai algoritma sorting. Harapannya, website ini dapat dikembangkan lebih lanjut untuk pembelajaran strategi algoritma yang lain seperti Divide & Conquer, Dynamic Programming, dll
-## Spesifikasi
-Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
- 1. Pengguna dapat memilih jenis algoritma sorting yang digunakan. Pilihan yang tersedia ialah sebagai berikut : 
-	* Bubble Sort (200 poin)
-	* Merge Sort (300 poin)
- 2. Pengguna dapat melihat langkah - langkah dari algoritma sorting yang digunakan hingga hasil terurut
- 3. Masukan pengguna berupa kumpulan bilangan bulat positif. Maksimum banyaknya bilangan yang diurutkan adalah 10
- 4. Pengguna dapat mengetahui informasi mengenai kompleksitas algoritma yang digunakan
- 5. Teknologi dan bahasa pemrograman bebas untuk back-end, dan untuk front-end dibuat semenarik mungkin dengan menggunakan **React.js** atau **Vue.js**
- 6. Pastikan Readme ini diganti dengan Readme untuk project yang kalian buat (dibuat sejelas mungkin) !
- 
- **Keterangan** : Pilihan algoritma sewaktu - waktu dapat ditambahkan dan akan diumumkan
-## Penilaian
-Nilai maksimum adalah 1500. Berbagai aspek yang akan dinilai ialah
- 1. Kebenaran fungsionalitas program
- 2. UI
-3. Clean Code (termasuk struktur repository)
+## Getting Started
+### Prerequisites
+* docker
+* web browser
 
-## Bonus (500 poin)
-Gunakan **Docker** dan **Deploy** website yang sudah selesai dibuat.
+### Installation for **LINUX**
+1. Buka terminal di directory ini (root)
+2. Jalankan command docker
+```
+$ docker build -t web:latest .
+$ docker run -d --name flask-vue -e "PORT=8765" -p 8007:8765 web:latest
+```
+3. Buka broswer (disarankan chrome atau mozilla firefox)
+4. Buka alamat http://localhost:8007/
+
+## Testing
+1. Pilih tab Bubble Sort atau MergeSort
+2. Masukkan angka (1 sampai 10 angka **integer**) pada field yang tersedia, angka dipisah dengan koma.
+```
+Contoh:
+3,1,-1,19
+```
+3. klik button SORT NOW!
+4. Langkah-langkah sorting akan ditampilkan pada table di bawahnya. Sorting yang dilakukan adalah secara menaik atau ascending.
+
+## Bonus Docker dan Deploy
+Bonus berhasil dibuat, web yang sudah di-deploy dapat dilihat pada link berikut https://annaelvira-sorting-tutorial.herokuapp.com/ 
+
+## Sample Screen
+<img src = "sample1.png">
+<img src = "sample2.png">
+
+## Acknowledgement
+Free vue components taken from https://www.creative-tim.com/product/vue-now-ui-kit 

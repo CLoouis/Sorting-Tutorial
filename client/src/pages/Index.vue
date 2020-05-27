@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="page-header clear-filter" filter-color="orange">
+    <div class="page-header clear-filter" filter-color="orange" id = "home">
       <parallax
         class="page-header-image"
-        style="background-image:url('img/header1.jpg')"
+        style="background-image:url('img/bg8.jpg')"
       >
       </parallax>
       <div class="container">
@@ -16,7 +16,7 @@
         </h6>
       </div>
     </div>
-    <tabs-section></tabs-section>
+    <tabs-section id = "algo"></tabs-section>
     <result-section></result-section>
     <div class="space-70"></div>
 
@@ -24,8 +24,6 @@
 </template>
 <script>
 import { Parallax } from '@/components';
-import BasicElements from './components/BasicElementsSection';
-import Navigation from './components/Navigation';
 import TabsSection from './components/Tabs';
 import ResultSection from './components/Result';
 

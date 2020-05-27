@@ -36,10 +36,9 @@
 
                 <h4>Let's Try It Out!</h4>
                     <div class = "mx-auto" style="width: 600px">
-                      <fg-input id="form-bubble-sort" v-model="message" placeholder="Input numbers here separated by comma (Ex. 10,-1,2)"  :style="{height: '40px'}"></fg-input>
+                      <fg-input id="form-bubble-sort" v-model="numbers" placeholder="Input numbers here separated by comma (Ex. 10,-1,2)"  :style="{height: '40px'}"></fg-input>
                     </div>
-                    <n-button type="primary" round @click="submitInput">SORT  NOW !</n-button>
-                
+                    <n-button type="primary" round @click="() => submitInput('bubble')">SORT  NOW !</n-button>
 
               </tab-pane>
               <tab-pane>
@@ -63,9 +62,9 @@
 
                 <h4>Let's Try It Out!</h4>
                 <div class = "mx-auto" style="width: 600px">
-                  <fg-input id="form-merge-sort" v-model="message" placeholder="Input numbers here separated by comma (Ex. 10,-1,2)"  :style="{height: '40px'}"></fg-input>
+                  <fg-input id="form-merge-sort" v-model="numbers" placeholder="Input numbers here separated by comma (Ex. 10,-1,2)"  :style="{height: '40px'}"></fg-input>
                 </div>
-                <n-button type="primary" round>SORT  NOW !</n-button>
+                <n-button type="primary" @click.native="() => submitInput('merge')"  round>SORT  NOW !</n-button>
               </tab-pane>
             </tabs>
           </card>
@@ -74,7 +73,8 @@
     </div>
 </template>
 <script>
-import { Card, Tabs, TabPane, FormGroupInput, Button } from '@/components';
+import { Card, Tabs, TabPane, FormGroupInput, Button } from '@/components'
+import axios from 'axios'
 
 export default {
   components: {
@@ -86,13 +86,25 @@ export default {
   },
   data(){
     return{
-      numbers:[],
-      lenNumber: 0
+      numbers: '',
     }
   },
   methods: {
-    SubmitInput(){
-      this.$emit('submitInput', this.numbers)
+    submitInput(method){
+        let filtered = this.numbers.split(',').map(e => parseInt(e))
+        let data = {
+          'array': filtered,
+          'asc': true,
+          'method': method
+        }
+        axios
+        .post('/sort', {
+          ...data
+        })
+        .then(res => {
+          this.$store.commit("changeResult", res.data.res)
+        })
+      
     }
   }
 };

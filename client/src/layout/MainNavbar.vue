@@ -11,41 +11,14 @@
       <li class="nav-item">
         <a
           class="nav-link"
-          href="https://www.creative-tim.com/product/vue-now-ui-kit"
-          target="_blank"
-        >
-          <i class=""></i>
-          <p>Home</p>
-        </a>
-      </li>
-      <drop-down
-        tag="li"
-        title="Algorithm"
-        icon="now-ui-icons design_app"
-        class="nav-item"
-      >
-        <nav-link to="/">
-          <i class="now-ui-icons business_chart-pie-36"></i> Bubble Sort
-        </nav-link>
-        <a
-          href="https://demos.creative-tim.com/vue-now-ui-kit/documentation"
-          target="_blank"
-          class="dropdown-item"
-        >
-          <i class="now-ui-icons design_bullet-list-67"></i> Merge Sort
-        </a>
-      </drop-down>
-      <li class="nav-item">
-        <a
-          class="nav-link"
           rel="tooltip"
           title="Find Source Code on GitHub"
           data-placement="bottom"
-          href=""
+          href="https://github.com/annaelvira24/Sorting-Tutorial"
           target="_blank"
         >
           <i class="fab fa-github"></i>
-          <p class="d-lg-none d-xl-none">Twitter</p>
+          <p class="d-lg-none d-xl-none">GitHub</p>
         </a>
       </li>
   
@@ -55,7 +28,7 @@
           rel="tooltip"
           title="Follow me on Instagram :D"
           data-placement="bottom"
-          href="https://www.instagram.com/CreativeTimOfficial"
+          href="https://www.instagram.com/annaelvira24"
           target="_blank"
         >
           <i class="fab fa-instagram"></i>
