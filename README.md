@@ -20,6 +20,7 @@ npm -v
 Jalankan perintah berikut pada CMD/ terminal perangkat anda di directory `sorting`
 
 ```
+npm install
 npm run serve
 ```
 
