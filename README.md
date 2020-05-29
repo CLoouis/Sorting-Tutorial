@@ -50,5 +50,8 @@ Contoh masukan: 1,5,3,4
 ## Deployment
 Aplikasi berhasil di deploy dan dapat diakses melalui alamat [ini](https://sortingtutorial.z13.web.core.windows.net/). 
 
+## Credits
+[Buefy](https://buefy.org/) - UI Components
+
 ## Author
 William Fu
