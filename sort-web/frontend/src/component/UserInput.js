@@ -50,10 +50,42 @@ class UserInput extends Component {
 
     }
     kompBS = () => {
-        return <p className="komp-text">O(n^2)</p>;
+        return (
+            <div>
+                <p className="ket">*n adalah jumlah elemen array yang perlu diurutkan*</p>
+                <p className="komp-text">Best Case : O(n)</p>
+                <div className="desc">
+                    <p><i>Best Case</i> dapat terjadi jika array sudah diurutkan,</p>
+                    <p>berarti tidak ada pertukaran elemen yang terjadi sehingga hanya ada 1 iterasi elemen n.</p>
+                </div>
+                <p className="komp-text">Worst Case : O(n<span className="sup">2</span>)</p>
+                <div className="desc">
+                    <p><i>Worst Case</i> dapat terjadi saat array berada dalam urutan menurun,</p>
+                    <p>sehingga terdapat iterasi sebanyak n(n+1)/2.</p>
+                </div>
+                <p className="komp-text">Average Case : O(n<span className="sup">2</span>)</p>
+                <div className="desc">
+                    <p><i>Average Case</i> dapat terjadi saat array tidak memenuhi 2 kondisi di atas,</p>
+                    <p>iterasi yang terjadi kurang dari <i>Worst Case</i> tapi tentunya lebih dari <i>Best Case</i>.</p>
+                </div>
+            </div>
+        );
     }
     kompMS = () => {
-        return <p className="komp-text">O(n log n)</p>;
+        return (
+            <div>
+                <p className="ket">*n adalah jumlah elemen array yang perlu diurutkan*</p>
+                <p className="komp-text">Best Case : O(n log(n))</p>
+                <p className="komp-text">Worst Case : O(n log(n))</p>
+                <p className="komp-text">Average Case : O(n log(n))</p>
+                <div className="desc">
+                    <p>Kompleksitas Waktu di atas diperoleh dari :</p>
+                    <p>1. Proses merge memerlukan waktu O(n) untuk menggabungkan hasil merge.</p>
+                    <p>2. Proses merge sort membagi array menjadi n buah sub-array dengan data tunggal. Proses ini memerlukan waktu O(log(n)).</p>
+                </div>
+            </div>
+
+        );
     }
     kompleksitas = () => {
 
@@ -75,65 +107,62 @@ class UserInput extends Component {
         return (
             <div>
                 {/* masukkan angka-angka untuk diolah */}
-                <div>
-                    <body className="App-insert">
-                        <p className="header-insert-number">Insert Your Numbers</p>
-                        <form>
-                            <input
-                                className="num-block"
-                                type="text"
-                                placeholder="example :1,2,3,4,5"
-                                onChange={this.handleChangeNumber}
-                            />
-                        </form>
-                    </body>
-                </div>
+
+                <body className="App-insert">
+                    <p className="header-insert-number">Insert Your Numbers</p>
+                    <form>
+                        <input
+                            className="num-block"
+                            type="text"
+                            placeholder="example :1,2,3,4,5"
+                            onChange={this.handleChangeNumber}
+                        />
+                    </form>
+                </body>
 
                 {/* pilih algoritma sorting */}
-                <div>
+                <body className="App-choose">
+                    <br></br>
+                    <p className="header-algo">Choose The Algorithm</p>
+                    <form>
+                        <label>
+                            <select className="select-block" onChange={this.handleChangeAlgo} >
+                                <option value="BS">Bubble Sort</option>
+                                <option value="MS">Merge Sort</option>
+                            </select>
+                        </label>
+                    </form>
+                    <br></br>
+                    <br></br>
+                    {/* submit button */}
+                    <div>
+                        <button className="submit-button" onClick={this.handleSubmit}>Get the Result</button>
+                    </div>
 
-                    <body className="App-choose">
-                        <br></br>
-                        <p className="header-algo">Choose The Algorithm</p>
-                        <form>
-                            <label>
-                                <select className="select-block" onChange={this.handleChangeAlgo} >
-                                    <option value="BS">Bubble Sort</option>
-                                    <option value="MS">Merge Sort</option>
-                                </select>
-                            </label>
-                        </form>
-                        <br></br>
-                        <br></br>
-                        <div>
-                            <button className="submit-button" onClick={this.handleSubmit}>Get the Result</button>
-                        </div>
 
+                    {/* nampilin hasil */}
+                    <div>
+                        {this.state.hasil.map((hasilSorting) => (
+                            <div>
+                                <Hasil hasilSort={hasilSorting} />
+                            </div>
+                        ))}
 
-                        {/* nampilin hasil */}
-                        <div>
-                            {this.state.hasil.map((hasilSorting) => (
-                                <div>
-                                    <Hasil hasilSort={hasilSorting} />
-                                </div>
-                            ))}
+                    </div>
+                    <br></br>
+                    {/* nampilin kompleksitas algoritma */}
+                    <div>
+                        {komp}
+                    </div>
 
-                        </div>
-                        <br></br>
-                        {/* nampilin kompleksitas algoritma */}
-                        <div>
-                            {komp}
-                        </div>
-
-                        {/* button try again */}
-                        <div>
-                            <button className="try-again-button" onClick={this.refreshPage}>Try Again</button>
-                        </div>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                    </body>
-                </div>
+                    {/* button try again */}
+                    <div>
+                        <button className="try-again-button" onClick={this.refreshPage}>Try Again</button>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </body>
 
             </div>
         );
