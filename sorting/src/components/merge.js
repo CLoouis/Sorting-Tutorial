@@ -1,11 +1,16 @@
 export var steps = [];
 
-function createSteps(first, second, arr) {
+function createSteps(first, second, arr, merged) {
   var copies = [];
   for (var i = 0; i < arr.length; ++i) {
     copies.push(arr[i]);
   }
-  var tuple = Object.freeze({ left: first, right: second, stats: copies });
+  var tuple = Object.freeze({
+    left: first,
+    right: second,
+    stats: copies,
+    merged: merged
+  });
   steps.push(tuple);
 }
 
@@ -16,14 +21,14 @@ export function sort(arr, i, j) {
 
   if (i < j) {
     var k = Math.floor((i + j) / 2);
-    createSteps(i, j, arr);
+    createSteps(i, j, arr, 0);
     sort(arr, i, k);
     sort(arr, k + 1, j);
     merge(arr, i, k, j);
-    createSteps(i, j, arr);
+    createSteps(i, j, arr, 1);
   } else {
     // Most likely case i == j
-    createSteps(i, j, arr);
+    createSteps(i, j, arr, 2);
   }
 }
 

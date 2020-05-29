@@ -1,11 +1,16 @@
 export var steps = [];
 
-function createSteps(first, second, arr) {
+function createSteps(first, second, arr, swapped) {
   var copies = [];
   for (var i = 0; i < arr.length; ++i) {
     copies.push(arr[i]);
   }
-  var tuple = Object.freeze({ left: first, right: second, stats: copies });
+  var tuple = Object.freeze({
+    left: first,
+    right: second,
+    stats: copies,
+    swap: swapped
+  });
   steps.push(tuple);
 }
 
@@ -14,16 +19,16 @@ export function sort(arr) {
   var size = arr.length;
   for (var i = 0; i < size; ++i) {
     for (var j = 0; j < size - i - 1; ++j) {
-      createSteps(j, j + 1, arr);
+      createSteps(j, j + 1, arr, false);
       if (arr[j] > arr[j + 1]) {
         var temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
-        createSteps(j, j + 1, arr);
+        createSteps(j, j + 1, arr, true);
       }
     }
   }
-  createSteps(11, 11, arr);
+  createSteps(11, 11, arr, false);
 }
 
 export function update(this_step, array_btn) {

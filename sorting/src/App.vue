@@ -15,10 +15,6 @@
   text-align: center;
   color: #2c3e50;
 }
-#home {
-  margin-left: 30px;
-  margin-bottom: 100px;
-}
 #nav {
   padding: 20px;
   text-align: left;
@@ -31,10 +27,5 @@
       font-weight: 600;
     }
   }
-}
-#title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  color: white;
 }
 </style>

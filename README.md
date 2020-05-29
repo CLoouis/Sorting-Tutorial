@@ -1,24 +1,52 @@
 # Sorting-Tutorial
-Berikut ini merupakan salah satu project yang menjadi bagian dari seleksi asisten IRK 2018
-## Latar Belakang
-Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah banyak algoritma untuk sorting yang telah dikembangkan di seluruh dunia. Untuk membantu orang - orang memahami berbagai algoritma sorting, tercetuslah ide untuk membuat sebuah website yang memberikan pemahaman mengenai algoritma sorting. Harapannya, website ini dapat dikembangkan lebih lanjut untuk pembelajaran strategi algoritma yang lain seperti Divide & Conquer, Dynamic Programming, dll
-## Spesifikasi
-Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
- 1. Pengguna dapat memilih jenis algoritma sorting yang digunakan. Pilihan yang tersedia ialah sebagai berikut : 
-	* Bubble Sort (200 poin)
-	* Merge Sort (300 poin)
- 2. Pengguna dapat melihat langkah - langkah dari algoritma sorting yang digunakan hingga hasil terurut
- 3. Masukan pengguna berupa kumpulan bilangan bulat positif. Maksimum banyaknya bilangan yang diurutkan adalah 10
- 4. Pengguna dapat mengetahui informasi mengenai kompleksitas algoritma yang digunakan
- 5. Teknologi dan bahasa pemrograman bebas untuk back-end, dan untuk front-end dibuat semenarik mungkin dengan menggunakan **React.js** atau **Vue.js**
- 6. Pastikan Readme ini diganti dengan Readme untuk project yang kalian buat (dibuat sejelas mungkin) !
- 
- **Keterangan** : Pilihan algoritma sewaktu - waktu dapat ditambahkan dan akan diumumkan
-## Penilaian
-Nilai maksimum adalah 1500. Berbagai aspek yang akan dinilai ialah
- 1. Kebenaran fungsionalitas program
- 2. UI
-3. Clean Code (termasuk struktur repository)
+Simple web application to visualize various sorting algorithms.
 
-## Bonus (500 poin)
-Gunakan **Docker** dan **Deploy** website yang sudah selesai dibuat.
+## Getting Started
+Aplikasi ini disusun dengan memanfaatkan [Vue.js](https://vuejs.org/) untuk frontend dan Node.js sebagai backend nya.
+
+### Prerequisite
+Untuk menjalankan aplikasi ini, pastikan perangkat anda telah memiliki dependencies berikut ini:
+- [Node.js](https://nodejs.org/en/) (v12.16.3 LTS)
+- [npm](https://www.npmjs.com/) (v6.14.4)
+
+Anda dapat memeriksa versi dari dependencies yang digunakan dengan menjalankan perintah berikut
+pada command prompt/ terminal perangkat anda.
+```
+node -v
+npm -v
+```
+
+### Installing
+Jalankan perintah berikut pada CMD/ terminal perangkat anda di directory `sorting`
+
+```
+npm run serve
+```
+
+Anda akan mendapat pesan pada CMD/ terminal sebagai berikut.
+```
+DONE  Compiled successfully in 5326ms                   12:06:27 PM
+
+
+App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.1.8:8080/
+
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+```
+
+Anda dapat mengakses aplikasi web pada alamat http://localhost:8080/ (Direkomendasikan menggunakan web browser Chrome atau Mozilla Firefox)
+
+## Running The App
+1. Pilih salah satu metode sorting yang ingin digunakan.
+2. Masukkan nilai-nilai yang ingin diurutkan, dipisahkan dengan koma (tanpa spasi). Nilai yang bisa diurutkan hanya nilai yang berupa integer positif.<br>
+Contoh masukan: 1,5,3,4
+3. Tekan tombol "Sort!"
+4. Hasil pengurutan (per langkah) dapat dinavigasi pada kotak Sorting Steps.
+
+
+## Deployment
+
+## Author
+William Fu

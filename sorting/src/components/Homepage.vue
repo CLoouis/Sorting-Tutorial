@@ -319,6 +319,51 @@ export default {
       }
       document.getElementById("curr").innerHTML =
         this.current + 1 + "/" + this.steps.length;
+      this.updateStep();
+    },
+    updateStep() {
+      var description = document.getElementById("stepdesc");
+      if (this.current == this.steps.length - 1) {
+        description.innerHTML = "Finished!";
+      } else {
+        var curr_step = this.steps[this.current];
+        if (this.sort_method == "Bubble Sort") {
+          if (curr_step.swap) {
+            description.innerHTML =
+              curr_step.stats[curr_step.right] +
+              " > " +
+              curr_step.stats[curr_step.left] +
+              ", so swap!";
+          } else {
+            description.innerHTML =
+              "Comparing " +
+              curr_step.stats[curr_step.left] +
+              " with " +
+              curr_step.stats[curr_step.right];
+          }
+        } else {
+          // Merge Sort
+          if (curr_step.merged == 0) {
+            description.innerHTML =
+              "Initiating MergeSort(" +
+              curr_step.left +
+              ", " +
+              curr_step.right +
+              ")";
+          } else if (curr_step.merged == 1) {
+            description.innerHTML = "Merge the two arrays";
+          } else {
+            // Base
+            description.innerHTML =
+              "MergeSort(" +
+              curr_step.left +
+              ", " +
+              curr_step.right +
+              ")" +
+              " is already sorted";
+          }
+        }
+      }
     }
   },
   data() {
