@@ -5,13 +5,14 @@
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">Step</th>
-                <th scope="col">Array</th>
+                <th scope="col">Array Condition</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(entry, index) in currentStep" v-bind:key="index">
                 <th scope="row">{{index+1}}</th>
-                <td>{{entry}}</td>
+                <td>{{entry.idx}}</td>
+                <td>{{entry.val}}</td>
                 </tr>
             </tbody>
         </table>
@@ -25,7 +26,11 @@ export default {
     },
     data : function(){
         return {
-            currentStep: [1, 2, 3]
+            currentStep: [
+                {idx : 1, val : 2},
+                {idx : 2, val : 3}, 
+                {idx : 3, val : 4},  
+            ]
         }
     }
 }
