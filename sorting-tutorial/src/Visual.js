@@ -204,7 +204,7 @@ export default class Visual extends React.Component{
                     {/* ,{this.state.arr} */}
                     {/* {this.drawArr()} */}
                     <VisualizeArray width={this.state.len*45 + 95} height={200} data={this.state.arr}/>
-                    <button onClick = {this.slide}>Sort</button>
+                    <button onClick = {this.slide}>Bubble Sort (O(n^2) complexity)</button>
                 </div>
                 <div>
                     {/* <button onClick={this.addCircle}>Add Circle</button> */}
