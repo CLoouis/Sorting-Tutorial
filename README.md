@@ -37,7 +37,7 @@ Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah 
 1. Pilih tab Bubble Sort atau Merge Sort
 2. Masukkan angka (1 sampai 10 angka **integer**) pada field yang tersedia, angka dipisah dengan koma tanpa spasi.
 3. Untuk kembali ke menu awal, klik logo "AlgoVisual" sebelah pojok kiri atas halaman
-# Contoh
+### Contoh
 <img src = "ss2.png">
 
 
@@ -51,4 +51,6 @@ Dockerfile dan file docker-compose yang digunakan dapat dilihat pada root direct
 
 ## Tampilan Website
 Berikut tampilan homepage dari website Sorting Tutorial :
+
+
 <img src = "ss.png">
