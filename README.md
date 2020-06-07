@@ -1,6 +1,15 @@
 # Sorting-Tutorial
+Project web visualisasi algoritma sorting seleksi asisten IRK 2018
 
-Sorting visualizer
+## Latar Belakang
+Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah banyak algoritma untuk sorting yang telah dikembangkan di seluruh dunia. Untuk membantu orang - orang memahami berbagai algoritma sorting, tercetuslah ide untuk membuat sebuah website yang memberikan pemahaman mengenai algoritma sorting. Harapannya, website ini dapat dikembangkan lebih lanjut untuk pembelajaran strategi algoritma yang lain seperti Divide & Conquer, Dynamic Programming, dll
+
+## Getting Started
+### Prerequisites
+* docker
+* web browser
+1. React.js
+2. Node.js
 
 ### Cara Menjalankan Aplikasi
 
@@ -24,72 +33,22 @@ Sorting visualizer
 
 2. Mengubah `HOST API` pada frontend, yaitu dengan mengubah pada variabel `URL_API` pada file `Sorting.js` yang berada di folder
 
-##### cara develop menggunakan docker-compose
+## Testing
+1. Pilih tab Bubble Sort atau Merge Sort
+2. Masukkan angka (1 sampai 10 angka **integer**) pada field yang tersedia, angka dipisah dengan koma tanpa spasi.
+3. Untuk kembali ke menu awal, klik logo "AlgoVisual" sebelah pojok kiri atas halaman
+# Contoh
+<img src = "ss2.png">
 
-1. untuk development digunakan untuk development agar bisa auto refresh backend dan frontend
 
-```
-docker-compose -f docker-compose-dev.yml up --build -d
+## Website yang telah di deploy
+Web yang sudah di deploy dapat dilihat pada link
+https://farid-sorting-tutorial.herokuapp.com/
 
-```
+## Penyelesaian Bonus
+Bonus berhasil diselesaikan dengan menggunakan docker dan deploy aplikasi ke heroku.
+Dockerfile dan file docker-compose yang digunakan dapat dilihat pada root directory.
 
-2. untuk production digunakan untuk mengecek bagaimana bentuk website saat dilihat di heroku
-
-```
-docker-compose -f docker-compose-dev.yml up --build -d
-
-```
-
-##### cara deploy ke heroku
-
-1. login ke heroku
-
-```
-heroku container:login
-```
-
-2. buat aplikasi menggunakan perintah di bawah pastikan aplikasimu kurang dari 5 jika sudah 5 hapus jika menggunakan free heroku
-
-```
-heroku create
-```
-
-3. ganti <HEROKU-APP-NAME> dengan nama heroku yang kamu buat dari heroku create
-
-```
-docker tag faridlazuarda/farid-sorting-tutorial:prod registry.heroku.com/<HEROKU-APP-NAME>/web
-```
-
-misal kamu mendapatkan hasil dari "heroku create" seperti dibawah
-
-```
-Creating app... done, ⬢ arcane-earth-48458
-https://arcane-earth-48458.herokuapp.com/ 
-```
-
-maka docker tagnya menjadi
-
-```
-docker tag faridlazuarda/farid-sorting-tutorial:prod registry.heroku.com/arcane-earth-48458/web:latest
-```
-
-4. push docker tag tadi ke registry docker heroku sama juga dengan diatas ganti <HEROKU-APP-NAME> dengan nama aplikasimu
-
-```
-docker push registry.heroku.com/<HEROKU-APP-NAME>/web:latest
-```
-
-5. setelah itu deploy aplikasimu ke docker dengan cara seperti dibawah ini
-
-```
-heroku container:release web
-```
-
-6. setelah selesai mendeploy , buka aplikasimu dengan
-
-```
-heroku open
-```
-
-7. misal kamu ingin mengupdate aplikasimu, jalankan "docker-compose build" lalu mulai lagi dari langkah no 3
-
+## Tampilan Website
+Berikut tampilan homepage dari website Sorting Tutorial :
+<img src = "ss.png">
