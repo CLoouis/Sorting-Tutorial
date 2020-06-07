@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  node-react-starter-app:
+    image: faridlazuarda/farid-sorting-tutorial:prod
+    build:
+      context: .
+    container_name: production
+    # restart: always
+    ports:
+      - "80:5000"

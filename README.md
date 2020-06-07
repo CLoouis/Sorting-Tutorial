@@ -1,24 +1,95 @@
 # Sorting-Tutorial
-Berikut ini merupakan salah satu project yang menjadi bagian dari seleksi asisten IRK 2018
-## Latar Belakang
-Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah banyak algoritma untuk sorting yang telah dikembangkan di seluruh dunia. Untuk membantu orang - orang memahami berbagai algoritma sorting, tercetuslah ide untuk membuat sebuah website yang memberikan pemahaman mengenai algoritma sorting. Harapannya, website ini dapat dikembangkan lebih lanjut untuk pembelajaran strategi algoritma yang lain seperti Divide & Conquer, Dynamic Programming, dll
-## Spesifikasi
-Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
- 1. Pengguna dapat memilih jenis algoritma sorting yang digunakan. Pilihan yang tersedia ialah sebagai berikut : 
-	* Bubble Sort (200 poin)
-	* Merge Sort (300 poin)
- 2. Pengguna dapat melihat langkah - langkah dari algoritma sorting yang digunakan hingga hasil terurut
- 3. Masukan pengguna berupa kumpulan bilangan bulat positif. Maksimum banyaknya bilangan yang diurutkan adalah 10
- 4. Pengguna dapat mengetahui informasi mengenai kompleksitas algoritma yang digunakan
- 5. Teknologi dan bahasa pemrograman bebas untuk back-end, dan untuk front-end dibuat semenarik mungkin dengan menggunakan **React.js** atau **Vue.js**
- 6. Pastikan Readme ini diganti dengan Readme untuk project yang kalian buat (dibuat sejelas mungkin) !
- 
- **Keterangan** : Pilihan algoritma sewaktu - waktu dapat ditambahkan dan akan diumumkan
-## Penilaian
-Nilai maksimum adalah 1500. Berbagai aspek yang akan dinilai ialah
- 1. Kebenaran fungsionalitas program
- 2. UI
-3. Clean Code (termasuk struktur repository)
 
-## Bonus (500 poin)
-Gunakan **Docker** dan **Deploy** website yang sudah selesai dibuat.
+Sorting visualizer
+
+### Cara Menjalankan Aplikasi
+
+#### Menjalankan Service API (Backend)
+
+1. Masuk ke folder `backend` melalui Terminal/CMD.
+2. Menginstal package yang diperlukan pada package.json dengan perintah `yarn install` atau `npm install`
+3. Ketikan `yarn start` atau `npm start`, untuk menjalankan server backendnya.
+4. Tunggu hingga server berhasil berjalan.
+
+#### Menjalankan Aplikasi (Frontend)
+
+1. Masuk ke folder `frontend` melalui Terminal/CMD.
+2. Menginstal package yang diperlukan pada package.json dengan perintah `yarn install` atau `npm install`.
+3. Ketikan `yarn start` atau `npm start`, untuk menjalankan aplikasinya.
+4. Setelah itu tunggu hingga proses berhasil.
+
+##### Konfigurasi
+
+1. Mengubah `PORT` pada backend server, yaitu dengan mengubah pada variabel `PORT` pada file `server.js` yang berada di folder `backend`
+
+2. Mengubah `HOST API` pada frontend, yaitu dengan mengubah pada variabel `URL_API` pada file `Sorting.js` yang berada di folder
+
+##### cara develop menggunakan docker-compose
+
+1. untuk development digunakan untuk development agar bisa auto refresh backend dan frontend
+
+```
+docker-compose -f docker-compose-dev.yml up --build -d
+
+```
+
+2. untuk production digunakan untuk mengecek bagaimana bentuk website saat dilihat di heroku
+
+```
+docker-compose -f docker-compose-dev.yml up --build -d
+
+```
+
+##### cara deploy ke heroku
+
+1. login ke heroku
+
+```
+heroku container:login
+```
+
+2. buat aplikasi menggunakan perintah di bawah pastikan aplikasimu kurang dari 5 jika sudah 5 hapus jika menggunakan free heroku
+
+```
+heroku create
+```
+
+3. ganti <HEROKU-APP-NAME> dengan nama heroku yang kamu buat dari heroku create
+
+```
+docker tag faridlazuarda/farid-sorting-tutorial:prod registry.heroku.com/<HEROKU-APP-NAME>/web
+```
+
+misal kamu mendapatkan hasil dari "heroku create" seperti dibawah
+
+```
+Creating app... done, ⬢ arcane-earth-48458
+https://arcane-earth-48458.herokuapp.com/ 
+```
+
+maka docker tagnya menjadi
+
+```
+docker tag faridlazuarda/farid-sorting-tutorial:prod registry.heroku.com/arcane-earth-48458/web:latest
+```
+
+4. push docker tag tadi ke registry docker heroku sama juga dengan diatas ganti <HEROKU-APP-NAME> dengan nama aplikasimu
+
+```
+docker push registry.heroku.com/<HEROKU-APP-NAME>/web:latest
+```
+
+5. setelah itu deploy aplikasimu ke docker dengan cara seperti dibawah ini
+
+```
+heroku container:release web
+```
+
+6. setelah selesai mendeploy , buka aplikasimu dengan
+
+```
+heroku open
+```
+
+7. misal kamu ingin mengupdate aplikasimu, jalankan "docker-compose build" lalu mulai lagi dari langkah no 3
+

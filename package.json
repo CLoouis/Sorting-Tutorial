@@ -1,0 +1,14 @@
+{
+  "name": "sorting-tutorial-backend",
+  "version": "1.0.0",
+  "description": "Tugas seleksi asisten lab IRK",
+  "main": "server.js",
+  "author": "Farid Lazuarda",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd frontend && yarn start",
+    "server": "cd backend && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "cd backend && node server.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "sorting-tutorial-backend",
+  "version": "1.0.0",
+  "description": "Tugas seleksi asisten lab IRK",
+  "main": "server.js",
+  "author": "Farid Lazuarda",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

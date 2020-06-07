@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  node-react-starter-app:
+    image: faridlazuarda/farid-sorting-tutorial:dev
+    build: 
+      context: .
+      dockerfile: dev.Dockerfile
+      target: dev
+    container_name: develop
+    # restart: always
+    volumes: 
+      - ./backend:/app/backend:rw
+      - ./frontend:/app/frontend:rw
+      
+    ports:
+      - "5000:5000"
+      - "3000:3000"
+ 
