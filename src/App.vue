@@ -1,39 +1,34 @@
 <template>
   <div id="app">
-    <Header />
-    <QuestionBox />
-    <Result />
+    <div>
+      <b-nav>
+        <b-nav-item active><router-link to="/BubbleSort">Bubble Sort</router-link></b-nav-item>
+        <b-nav-item active><router-link to="/MergeSort">Merge Sort</router-link></b-nav-item>
+      </b-nav>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import Header from './components/Header.vue'
-import QuestionBox from './components/QuestionBox.vue'
-import Result from './components/Result.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Header,
-    QuestionBox,
-    Result
-  },
-  data() {
-    return {
-      array: [],
-      results: []
-    }
-  },
-}
-</script>
-
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
