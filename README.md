@@ -43,11 +43,11 @@ Berikut ini adalah langkah-langkah dalam penginstallan aplikasi:
    ```
 
 ## How to Run Program
-### 1. Deployed Website
+### A. Deployed Website
 Hasil aplikasi web sudah dideploy menggunakan aplikasi heroku. Anda bisa langsung menggunakan aplikasi web tersebut dengan mengunjungi
 laman http://sthyrelest-sorting-tutorial.herokuapp.com/
 
-### 2. Menjalankan secara lokal
+### B. Menjalankan secara lokal
 Untuk menjalankan aplikasi web secara lokal, berikut ini adalah langkah-langkah dalam menjalankan aplikasi.
 1. Lakukan instalasi project terlebih dahulu dengan menjalankan command berikut ini.
    ```
@@ -63,7 +63,7 @@ Untuk menjalankan aplikasi web secara lokal, berikut ini adalah langkah-langkah 
    ```
 4. Selamat mencoba aplikasi Sorting Tutorial!
 
-### 3. Menggunakan Docker
+### C. Menggunakan Docker
 Untuk menjalankan aplikasi web menggunakan docker, berikut ini adalah langkah-langkah dalam menjalankan aplikasi.
 1. Lakukan pembuatan image berdasarkan dockerfile yang tersedia dengan menjalankan command berikut ini.
    ```
