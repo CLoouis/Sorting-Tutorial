@@ -1,4 +1,6 @@
 .git/
-client/node_modules/
+node_modules/
+dist/
+assets/
 npm-debug
 docker-compose*.yml
