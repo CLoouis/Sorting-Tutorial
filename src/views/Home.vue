@@ -22,7 +22,7 @@
 // Home.vue
 // Represent the Home HTML Page
 export default {
-  name: 'Home',
+  name: 'Home'
 }
 </script>
 
