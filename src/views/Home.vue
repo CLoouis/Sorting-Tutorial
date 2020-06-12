@@ -1,4 +1,5 @@
 <template>
+  <!-- Main Menu / Home HTML Page -->
   <div class="home">
     <div>
     <b-jumbotron bg-variant="light">
@@ -18,18 +19,14 @@
 </template>
 
 <script>
+// Home.vue
+// Represent the Home HTML Page
 export default {
   name: 'Home',
-  data: function () {
-    return {
-      show: false
-    }
-  }
 }
 </script>
 
 <style scoped>
-
 .home {
   margin-top: 130px;
 }
@@ -38,5 +35,4 @@ export default {
   font-size: 15px;
   font-style: italic;
 }
-
 </style>

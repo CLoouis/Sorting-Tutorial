@@ -1,5 +1,7 @@
 <template>
+  <!-- MergeSort HTML Page -->
   <div class="BubbleSort">
+    <!-- Passing titlePage, algorithm choice, video link, and slot description into the jumbotron component -->
     <Jumbotron :TitlePage="'Bubble Sort'" :choice="true" :linkWeb="'https://www.youtube.com/watch?v=nmhjrI-aW5o'">
       <p>
       Bubble Sort adalah salah satu algoritma pengurutan array yang memiliki prinsip paling naif dan <i>straightforward</i>.
@@ -14,7 +16,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
+// BubbleSort.vue
+// Represent the page of the Bubble Sort section
 import Jumbotron from '@/components/Jumbotron.vue'
 
 export default {

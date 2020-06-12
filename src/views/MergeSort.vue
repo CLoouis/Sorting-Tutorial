@@ -1,5 +1,7 @@
 <template>
+  <!-- MergeSort HTML Page -->
   <div class="MergeSort">
+    <!-- Passing titlePage, algorithm choice, video link, and slot description into the jumbotron component -->
     <Jumbotron :TitlePage="'Merge Sort'" :choice="false" :linkWeb="'https://www.youtube.com/watch?v=JSceec-wEyw'">
       <p>
       Merge Sort adalah salah satu metode pengurutan array dengan memanfaatkan prinsip <i>Divide and Conquer</i>.
@@ -15,11 +17,13 @@
 </template>
 
 <script>
-// @ is an alias to /src
+// MergeSort.vue
+// Represent the page of the Merge Sort section
 import Jumbotron from '@/components/Jumbotron.vue'
 
 export default {
   name: 'MergeSort',
+  // Contain Jumbotron component
   components: {
     Jumbotron
   }

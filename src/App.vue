@@ -1,5 +1,7 @@
 <template>
+  <!-- App HTML Page -->
   <div id="app">
+    <!-- Navigation Bar and Router -->
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
         <b-navbar-brand><router-link to="/"><font color='white'>Sorting Tutorial</font></router-link></b-navbar-brand>
