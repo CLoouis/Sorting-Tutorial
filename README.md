@@ -28,9 +28,9 @@ Berikut ini adalah langkah-langkah dalam penginstallan aplikasi:
    ```
    https://nodejs.org/en/download/
    ```
-2. Untuk menginstall Vue.js, jalankan command berikut pada command prompt.
+2. Untuk menginstall project ini, jalankan command berikut pada directory ./client
    ```
-   npm install -g @vue/cli
+   npm install
    ```
 3. Untuk menginstall Docker, lakukan pengunduhan Docker Toolbox terlebih dahulu dari laman berikut ini.
    ```
