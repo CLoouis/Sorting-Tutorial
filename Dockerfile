@@ -5,13 +5,13 @@ FROM node as build-stage
 WORKDIR /app
 
 # Copy both package .json into app directory
-COPY ./client/package*.json ./
+COPY package*.json ./
 
 # Install Vue.js project
 RUN npm install
 
 # Copy all project files into app directory
-COPY ./client/ ./
+COPY . .
 
 # Build the app for production
 RUN npm run build
