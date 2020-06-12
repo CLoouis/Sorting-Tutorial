@@ -48,8 +48,8 @@ export default {
       const k = Math.floor((i + j) / 2)
 
       // Pecah array menjadi 2 bagian sama rata
-      const message = 'Pecah array menjadi dua bagian sama rata'
-      const status = 'Divider'
+      const message = 'Pecah array ' + this.convertToString(T.slice(i - 1, j)) + ' menjadi dua bagian'
+      const status = 'Divide & Conquer'
       const temp1 = T.slice(i - 1, k)
       const temp2 = T.slice(k, j)
       const fulltemp = this.convertToString(temp1) + ' dan ' + this.convertToString(temp2)
@@ -65,10 +65,20 @@ export default {
   MainMergeSort (charArray) {
     var i
     var arr = []
-    for (i = 0; i < charArray.length; i++) {
-      arr.push(parseInt(charArray[i]))
-    }
     var steps = []
+    var validity = true
+    for (i = 0; i < charArray.length; i++) {
+      const elmt = parseInt(charArray[i])
+      if (isNaN(elmt)) {
+        validity = false
+        break
+      } else {
+        arr.push(elmt)
+      }
+    }
+    if (!validity) {
+      return steps
+    }
     var count = [0]
     steps.push({ Step: count[0], Penjelasan: 'Inisialisasi Array', Status: 'Initialization', Array: this.convertToString(arr.slice(0)) })
     const n = arr.length

@@ -19,7 +19,7 @@
         ></b-form-input>
       </b-form-group>
     </b-form>
-    <b-button variant="primary" @click="execute" style="margin-bottom : 20px;">Urutkan!</b-button>
+    <b-button variant="success" @click="execute" style="margin-top : 20px; margin-bottom : 20px;">Urutkan!</b-button>
     <div v-if="process === true">
       <Result :charArray="charArray" :choice="this.algorithmChoice" />
     </div>
@@ -46,8 +46,8 @@ export default {
   },
   methods: {
     execute () {
-      this.process = true
       this.charArray = this.removeSpace()
+      this.process = true
     },
     clear () {
       this.arrayInput = ''

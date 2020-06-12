@@ -11,27 +11,37 @@ export default {
   bubbleSort (charArray) {
     var i, j
     var arr = []
+    var validity = true
     for (i = 0; i < charArray.length; i++) {
-      arr.push(parseInt(charArray[i]))
+      const elmt = parseInt(charArray[i])
+      if (isNaN(elmt)) {
+        validity = false
+        break
+      } else {
+        arr.push(elmt)
+      }
     }
     var steps = []
     var count = 0
-    steps.push({ Step: count, Penjelasan: 'Inisialisasi Array', Status: 'No Swap', Array: this.convertToString(arr.slice(0)) })
+    if (!validity) {
+      return steps
+    }
+    steps.push({ Step: count, Penjelasan: 'Inisialisasi Array', Status: 'Initialization', Array: this.convertToString(arr.slice(0)) })
     const n = arr.length
     for (i = 0; i < n; i++) {
       for (j = 0; j < n - i - 1; j++) {
-        var message = 'Compare ' + arr[j] + ' and ' + arr[j + 1]
-        var comparison = 'Is ' + arr[j] + ' > ' + arr[j + 1] + ' ?'
+        var message = 'Bandingkan antara ' + arr[j] + ' dan ' + arr[j + 1]
+        var comparison = 'Apakah ' + arr[j] + ' > ' + arr[j + 1] + ' ?'
         var action
         var IsSwap
         if (arr[j] > arr[j + 1]) {
-          action = 'Yes, swap ' + arr[j] + ' with ' + arr[j + 1]
+          action = 'Ya, tukar posisi ' + arr[j] + ' dengan ' + arr[j + 1]
           const temp = arr[j]
           arr[j] = arr[j + 1]
           arr[j + 1] = temp
           IsSwap = 'Swapped'
         } else {
-          action = 'No, it means ' + arr[j] + ' and ' + arr[j + 1] + ' ordered'
+          action = 'Tidak, maka ' + arr[j] + ' dan ' + arr[j + 1] + ' sudah terurut'
           IsSwap = 'No Swap'
         }
         count++
