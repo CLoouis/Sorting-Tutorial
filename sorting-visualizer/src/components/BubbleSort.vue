@@ -11,7 +11,7 @@
       <input 
         v-model="value" 
         class="inputForm" 
-        placeholder="List number, split by space e.g. '1 4 2 5'"
+        placeholder="List number, split by space e.g. 1 4 2 5"
       >
       <br><br>
       <h3>
@@ -187,5 +187,9 @@ li {
     padding: 20px 30px;
     border-style: groove; 
     margin: 0 10px;
+}
+
+.inputForm{
+    width:500px;
 }
 </style>
