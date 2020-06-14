@@ -18,4 +18,9 @@ https://sorting-visualizer-taufiqhd123.web.app/
 1. install package yang diperlukan `npm install`
 2. run app nya `npm run serve`
 
+## Tutorial
+1. Pilih metode sorting
+2. Masukkan angka-angka yang mau disorting (format masukannya dipisahkan dengan spasi `1 4 2 5`)
+3. Klik tombol sort
+4. Klik tombol next sampai proses selesai
 
