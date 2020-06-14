@@ -8,7 +8,7 @@ Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah 
 https://sorting-visualizer-taufiqhd123.web.app/
 <br>
 berikut adalah tampilannya
-<img src = "screenshots/home.png">
+<img src = "sorting-visualizer/screenshots/home.png">
 
 ## How to run
 ### Option 1: From web directly
