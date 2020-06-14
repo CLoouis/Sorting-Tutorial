@@ -4,6 +4,7 @@ import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BubbleSort from '@/components/BubbleSort'
+import MergeSort from '@/components/MergeSort'
 
 Vue.config.productionTip = false
 
@@ -12,7 +13,8 @@ Vue.use(BootstrapVue)
 
 const routes = {
   '/': App,
-  '/BubbleSort': BubbleSort
+  '/BubbleSort': BubbleSort,
+  '/MergeSort': MergeSort
 }
 
 const NotFound = { template: '<p>Page not found</p>' }

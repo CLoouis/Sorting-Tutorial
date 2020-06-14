@@ -1,17 +1,25 @@
 <template>
   <div class="BubbleSort">
-    <Title msg="Bubble Sort Visualizer App"/>
+    <Title />
+    <br> <br>
+    <div class="appTitle">
+        <h1>Bubble Sort</h1>
+        <p>Time complexity: O(n^2)</p>
+    </div>
+    <br>
     <div>
       <input 
         v-model="value" 
         class="inputForm" 
         placeholder="List number, split by space e.g. '1 4 2 5'"
       >
+      <br><br>
       <h3>
         <button @click="startProses()" variant="success">SORT!</button>
       </h3>
+      <br>
     </div>
-    <p v-if="isStart" id = "result">result</p>
+    <h3 v-if="isStart" id = "result">result</h3><br>
     <div :key="stateIdx" v-for="(state, stateIdx) in this.listState" class="listState">
       <div v-if="stateIdx == currIdxListState">
         <div :key="idx" v-for="(el, idx) in state.arr" class="boxOut">
@@ -22,7 +30,7 @@
                 <span v-else-if="idx == state.secondEl" class="secondEl">
                     {{ el }}
                 </span>
-                <span v-else>
+                <span v-else class="normalEl">
                     {{ el }}
                 </span>
             </div>
@@ -146,25 +154,38 @@ export default {
 }
 ul {
     list-style-type: none;
-    padding: 0;
+
 }
 li {
     display: inline-block;
-    margin: 0 10px;
+
 }
 .boxOut{
     display: inline-block;
+    
 }
 .elOut{
+    position: relative;
+}
+.firstEl{
+    background-color: #431e88;
+    color: white;
+    padding: 20px 30px;
     border-style: groove; 
     margin: 0 10px;
 }
-.firstEl{
-    background-color: black;
-    color: white;
-}
 .secondEl{
-    background-color: blue;
+    background-color: #383779;
     color: white;
+    padding: 20px 30px;
+    border-style: groove; 
+    margin: 0 10px;
+}
+.normalEl{
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    border-style: groove; 
+    margin: 0 10px;
 }
 </style>
