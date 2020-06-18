@@ -18,8 +18,6 @@ export default class MergeSort extends React.Component {
     }
 
     componentDidMount() {
-        console.log(`Initial: ${this.props.numbers}`);
-        console.log(this.state.current);
         this.mergeSort([...this.props.numbers], 0, this.props.numbers.length - 1);
         this.history = this.history.concat([{
             highlight: [],
@@ -41,8 +39,6 @@ export default class MergeSort extends React.Component {
     }
 
     next() {
-        console.log(this.state.current);
-        console.log(this.state.history);
         if (this.state.current < this.state.history.length - 1) {
             this.setState({
                 current: this.state.current + 1,
@@ -97,13 +93,13 @@ export default class MergeSort extends React.Component {
             this.history.push({
                 highlight: Array(k - i + 1).fill().map((_, idx) => i + idx),
                 numbers: [...numbers],
-                details: `Divide from index ${i} to ${k}`,
+                details: i === k? `Cannot be divided anymore` : `Divide from index ${i} to ${k}`,
             })
             this.mergeSort(numbers, i , k);
             this.history.push({
                 highlight: Array(j - (k + 1) + 1).fill().map((_, idx) => (k + 1) + idx),
                 numbers: [...numbers],
-                details: `Divide from index ${k + 1} to ${j}`,
+                details: (k+1) === j? `Cannot be divided anymore` : `Divide from index ${k + 1} to ${j}`,
             })
             this.mergeSort(numbers, k + 1, j);
             this.mergeArr(numbers, i, k, j);
@@ -123,7 +119,7 @@ export default class MergeSort extends React.Component {
 
         return (
             <div className="Merge-sort sorting">
-                <h1>This is <span className="secondary-color">Merge Sort!</span></h1>
+                <h2>This is <span className="secondary-color">Merge Sort!</span></h2>
                 <div className="number-container">
                     {numbers}
                 </div>

@@ -6,10 +6,13 @@ import Home from './components/Home'
 function App() {
   return (
     <div className="App">
+      <nav className="App-nav">
+        <a href=""><span>Yul's Sorting</span></a>
+      </nav>
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <h1>Welcome to <span className="secondary-color">Sorting Tutorial!</span></h1>
       </header>
-      <main>
+      <main className="App-main">
         <Home />
       </main>
     </div>

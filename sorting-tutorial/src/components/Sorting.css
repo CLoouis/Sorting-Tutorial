@@ -1,6 +1,15 @@
+.sorting {
+    border: 1px solid #FFC312;
+    grid-area: result;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
 .number-container {
     display: flex;
     justify-content: center;
+    margin: 10px 0;
 }
 
 .number {
@@ -13,4 +22,28 @@
 
 .highlight {
     background-color: #FFC312;
+}
+
+.sorting p {
+    margin-bottom: 10px;;
+}
+
+@media (max-width: 768px) {
+    .number {
+        padding: 7.5px 10px;
+        margin: 4px 7px;
+        border: 1px solid #FFC312;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 570px) {
+    .number {
+        padding: 6px 6px;
+        margin: 4px 5px;
+        border: 1px solid #FFC312;
+        border-radius: 5px;
+        font-size: 15px;
+    }
 }

@@ -10,6 +10,7 @@ export default class BubbleSort extends React.Component {
             history: [{
                 details: 'Initial',
                 numbers: props.numbers,
+                highlight: [],
             }],
         }
         this.prev = this.prev.bind(this);
@@ -20,15 +21,17 @@ export default class BubbleSort extends React.Component {
         let swap = true;
         let history = [...this.state.history];
         let numbers = [...history.slice(-1)[0].numbers];
+        let highlight, details;
         while (swap) {
             swap = false;
             for (let i = 0; i < numbers.length - 1; i++) {
-                let details;
+                highlight = [i, i + 1];;
                 if (numbers[i] > numbers[i + 1]) {
                     details = `${numbers[i]} is more than ${numbers[i + 1]}`;
                     history = history.concat({
                         details: details,
                         numbers: numbers,
+                        highlight: [...highlight],
                     });
                     numbers = [...numbers];
                     [numbers[i], numbers[i + 1]] = [numbers[i + 1], numbers[i]];
@@ -38,6 +41,7 @@ export default class BubbleSort extends React.Component {
                     history = history.concat({
                         details: details,
                         numbers: numbers,
+                        highlight: [...highlight],
                     });
                 }
             }
@@ -45,8 +49,9 @@ export default class BubbleSort extends React.Component {
 
         this.setState({
             history: history.concat({
-                details: 'Finished Sorting',
+                details: 'Finished',
                 numbers: numbers,
+                highlight: [],
             }),
         })
     }
@@ -67,14 +72,6 @@ export default class BubbleSort extends React.Component {
         }
     }
 
-    isInitial() {
-        return this.state.current === 0;
-    }
-
-    isFinished() {
-        return this.state.current === this.state.history.length - 1;
-    }
-
     render() {
         
         
@@ -82,7 +79,7 @@ export default class BubbleSort extends React.Component {
         const leftIdx = (this.state.current - 1) % (currentHistory.numbers.length - 1);
         const details = currentHistory.details;
         const numbers = currentHistory.numbers.map((num, idx) => {
-            const numClass = (idx === leftIdx || idx === leftIdx + 1) && !(this.isInitial() || this.isFinished()) ?
+            const numClass = (currentHistory.highlight.includes(idx)) ?
                 'number highlight': 'number';
             return (
                 <div className={numClass} key={idx}>{num}</div>
@@ -90,11 +87,11 @@ export default class BubbleSort extends React.Component {
         })
         return (
             <div className="bubble-sort sorting">
-                <h1>This is <span className="secondary-color">Bubble Sort!</span></h1>
+                <h2>This is <span className="secondary-color">Bubble Sort!</span></h2>
                 <div className="number-container">
                     {numbers}
                 </div>
-                <p>{this.state.current} <span class="secondary-color">/</span> {this.state.history.length - 1}</p>
+                <p>{this.state.current} <span className="secondary-color">/</span> {this.state.history.length - 1}</p>
                 <p>{details}</p>
                 <button type="button" onClick={this.prev}>Previous</button>
                 <button type="button" onClick={this.next}>Next</button>
