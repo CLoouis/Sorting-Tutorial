@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, Switch, Route} from 'react-router-dom';
 import MergeSort from './MergeSort';
 import BubbleSort from './BubbleSort';
 import './Home.css';

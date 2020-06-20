@@ -73,10 +73,7 @@ export default class BubbleSort extends React.Component {
     }
 
     render() {
-        
-        
         const currentHistory = this.state.history[this.state.current]
-        const leftIdx = (this.state.current - 1) % (currentHistory.numbers.length - 1);
         const details = currentHistory.details;
         const numbers = currentHistory.numbers.map((num, idx) => {
             const numClass = (currentHistory.highlight.includes(idx)) ?
