@@ -1,7 +1,9 @@
 # Sorting-Tutorial
 Berikut ini merupakan salah satu project yang menjadi bagian dari seleksi asisten IRK 2018
+
 ## Latar Belakang
 Salah satu penerapan algoritma yang paling mudah adalah sorting. Saat ini sudah banyak algoritma untuk sorting yang telah dikembangkan di seluruh dunia. Untuk membantu orang - orang memahami berbagai algoritma sorting, tercetuslah ide untuk membuat sebuah website yang memberikan pemahaman mengenai algoritma sorting. Harapannya, website ini dapat dikembangkan lebih lanjut untuk pembelajaran strategi algoritma yang lain seperti Divide & Conquer, Dynamic Programming, dll
+
 ## Spesifikasi
 Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
  1. Pengguna dapat memilih jenis algoritma sorting yang digunakan. Pilihan yang tersedia ialah sebagai berikut : 
@@ -13,12 +15,28 @@ Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
  5. Teknologi dan bahasa pemrograman bebas untuk back-end, dan untuk front-end dibuat semenarik mungkin dengan menggunakan **React.js** atau **Vue.js**
  6. Pastikan Readme ini diganti dengan Readme untuk project yang kalian buat (dibuat sejelas mungkin) !
  
- **Keterangan** : Pilihan algoritma sewaktu - waktu dapat ditambahkan dan akan diumumkan
-## Penilaian
-Nilai maksimum adalah 1500. Berbagai aspek yang akan dinilai ialah
- 1. Kebenaran fungsionalitas program
- 2. UI
-3. Clean Code (termasuk struktur repository)
+## Prerequisites
+1. Python 3.6/3.7/3.8 Download https://www.python.org/downloads/
+2. Flask bisa diunduh melalui terminal dengan command pip install flask
+3. Download node.js di https://nodejs.org/en/download/ untuk menggunakan React.js
+4. Docker
 
-## Bonus (500 poin)
-Gunakan **Docker** dan **Deploy** website yang sudah selesai dibuat.
+### Built With
+- Visual Studio Code
+- Google Chrome
+- Docker
+
+### How to Run without Docker
+1. Buka terminal pertama
+2. Pergi ke direktori ./backend/src
+3. Untuk me-run backend, ketik di terminal:  python -m flask run 
+4. Buka terminal kedua
+5. Pergi ke direktori ./frontend
+6. Untuk me-run laman, ketik di terminal kedua: npm start
+
+### Authors
+- Fadhil Muhammad Rafi'
+
+### Acknowledgement
+- Muhammad Hendry Prasetya
+- Anna Elvira
