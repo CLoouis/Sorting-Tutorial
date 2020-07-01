@@ -33,6 +33,7 @@ Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
 4. Buka terminal kedua
 5. Pergi ke direktori ./frontend
 6. Untuk me-run laman, ketik di terminal kedua: npm start
+7. Masukkan input berupa array bilangan integer dipisahkan dengan koma ",", contoh: 1,7,4,2,11,3,2,5,7
 
 ### Authors
 - Fadhil Muhammad Rafi'
