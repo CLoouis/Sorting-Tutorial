@@ -1,17 +1,18 @@
 import Merge
 import Bubble
 import re
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, Blueprint, render_template, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__, static_folder='../build', static_url_path='/')
 CORS(app)
+api = Blueprint('api', __name__)
 
-@app.route('/')
-def index():
-    return app.send_static_file(index.html)
+@app.route('/api')
+def test():
+    return "Hello"
 
-@app.route('/src/process', methods=['GET'])
+@app.route('/api/src/process', methods=['GET'])
 def process():
     string =  request.args.get('input')
     method = request.args.get('method')
@@ -47,6 +48,7 @@ def buildResponse(arr):
     }
     return res
 
-method = 'Bubble'
-string = '1,3,2,7,4,5,10,19,7,6,12,11,10,10'
-print(Sort(string, method))
+app.register_blueprint(api, url_prefix='/api')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True, port=5050)

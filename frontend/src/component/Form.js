@@ -4,11 +4,13 @@ import Table from './Table'
 export class Form extends Component {
     constructor(props) {
         super(props)
-    
+        
+        // const baseUrl = 'http://localhost:5000';
+        const baseUrl = 'api';
         this.state = {
              array: '',
              metode: 'Bubble',
-             url: 'http://localhost:5000/src/process?',
+             url: `${baseUrl}/src/process?`,
              rendernow: false,
              komp:''
         }

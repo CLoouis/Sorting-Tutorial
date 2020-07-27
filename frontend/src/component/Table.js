@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import style from './style.css'
 import axios from 'axios'
 
 class Table extends Component {

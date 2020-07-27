@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import Title from './component/Title'
-import style from './component/style.css'
+import './component/style.css'
 import Form from './component/Form';
 import Footer from './component/Footer';
 
