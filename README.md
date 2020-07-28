@@ -19,7 +19,7 @@ Buatlah sebuah aplikasi web dengan spesifikasi sebagai berikut :
 1. Python 3.6/3.7/3.8 Download https://www.python.org/downloads/
 2. Flask bisa diunduh melalui terminal dengan command pip install flask
 3. Web Browser
-4. Internet (karena menggunakan jquery yang diambil dari googleapis.com)
+4. Internet (untuk menjalankan dari server AWS)
 
 ### Built With
 - Visual Studio Code
