@@ -1,0 +1,106 @@
+.webInput{
+    background-color:#2B0548;
+    background-size: 700px;
+    background-position: top;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: whitesmoke;
+}
+
+.kompWeb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: wheat;
+}
+
+.sup {
+    position: relative;
+    bottom: 1ex; 
+    font-size: 80%;
+}
+.titleInput{
+    font-size: 40px;
+    text-align: "center";
+}
+
+.kompleksitas{
+    background-color: whitesmoke;
+    border: 1px solid #eee;
+    border-radius:8px;
+    width:250px;
+    height: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+    display: inline-table;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    background-position: center;
+}
+
+.textKomp{
+    font-size: 20px;
+    text-align: center;
+    color:black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.numInputbox{
+    width: 210px;
+    height: 25px;
+    border-radius: 5px;
+    border-color:rgb(130, 145, 231);
+    box-shadow: none;
+    padding-left:6px ;
+    color: #2B0548;
+}
+
+.algoInputbox{
+    width: 120px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border-color: rgb(130, 145, 231);
+    text-align: center;
+    cursor: pointer;
+    appearance: none;
+    padding-left: 0px;
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+}
+
+.submitButton{ 
+    color: rgb(59, 59, 59);
+    background-color:#F5A623;
+    border: 2px solid #eee;
+    border-radius:8px;
+    font-size: 19px;  
+    width: 200px;
+    height: 50px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.tryagainButton{ 
+    color: rgb(59, 59, 59);
+    background-color:#31C3B0;
+    border: 2px solid #eee;
+    border-radius:8px;
+    font-size: 19px;  
+    width: 200px;
+    height: 50px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+
+
