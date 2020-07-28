@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Red+Hat+Text&display=swap');
+@import url('/font-awesome-4.7.0/css/font-awesome.min.css');
+
+.App{
+    font-family: 'Baloo 2', cursive;
+    font-weight: 400;
+}
+
+.title{
+    color:white;
+    background-color: teal;
+    padding: 50px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.title-text{
+    padding: 0px;
+    margin: 0px
+}
+
+.keterangan-judul{
+    padding-bottom: 0px;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.form{
+    padding:50px;
+    color:teal;
+    font-size: 25px;
+}
+
+.input-box{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border-color:rgb(167, 184, 184);
+    box-shadow: none;
+    padding-left:6px ;
+    font-family: 'Baloo 2', 'cursive';
+    color: teal;
+}
+
+.input-box:focus{
+    border-color: teal;
+}
+
+.submit{
+    margin: 60px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    background-color: teal;
+    border:none;
+    border-radius:6px;
+    font-family: 'Baloo 2', 'cursive';
+    font-size: 27px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: rgb(17, 87, 87);
+}
+
+.select{
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: teal;
+    border-color: rgb(130, 165, 165);
+    font-family: 'Baloo 2', 'cursive';
+    text-align: center;
+    cursor: pointer;
+    appearance: none;
+    padding-left: 0px;
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+}
+
+option{
+    padding-left: 8px;
+}
+
+.select:active,
+.select:hover{
+    border-color: teal;
+}
+
+
+.table{
+    width: 100%;
+    margin: 20px;
+}
+
+th{
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.isi{
+    background-color:rgb(221, 240, 240) ;
+}
+
+tbody{
+    border-radius: 5px;
+}
+.footer{
+    background-color: teal;
+    font-size: 20px;
+    padding: 18px;
+    color: white;
+    top: 0px;
+    font-weight: 400;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    top: 79%;
+    margin-top: 30px;
+  
+}
