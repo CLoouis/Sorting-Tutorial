@@ -25,10 +25,10 @@ export default class StepList extends React.Component{
     deskripsiMerge(){
         return(
             <div>
-                <h3>Merge Sort</h3>
-                <p className="desk-text">Best Case : O(n)</p>
-                <p className="desk-text">Worst Case : O(n^2)</p>
-                <p className="desk-text">Average Case : O(n^2)</p>  
+                <h3>Merge Sort</h3>  
+                <p className="desk-text">Best Case : O(n log(n))</p>
+                <p className="desk-text">Worst Case : O(n log(n))</p>
+                <p className="desk-text">Average Case : O(n log(n))</p> 
             </div>
         )
     }
@@ -37,9 +37,9 @@ export default class StepList extends React.Component{
         return(
             <div>
                 <h3>Bubble Sort</h3>
-                <p className="desk-text">Best Case : O(n log(n))</p>
-                <p className="desk-text">Worst Case : O(n log(n))</p>
-                <p className="desk-text">Average Case : O(n log(n))</p>  
+                <p className="desk-text">Best Case : O(n)</p>
+                <p className="desk-text">Worst Case : O(n^2)</p>
+                <p className="desk-text">Average Case : O(n^2)</p>
             </div>
         )
     }

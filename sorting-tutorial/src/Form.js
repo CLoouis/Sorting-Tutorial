@@ -1,48 +1,6 @@
 import React from 'react'
 
 export default class Form extends React.Component{
-    // constructor(){
-    //     super();
-    //     this.state = {
-    //         arr : [],
-    //         arrText : ""
-    //     }
-    //     this.onChange = this.onChange.bind(this)
-    //     this.onclick = this.onClick.bind(this)
-    // }
-    
-    // parseArr(){
-    //     var text = this.state.arrText
-    //     var res = []
-    //     console.log(text)
-    //     text.split(",").map(num => res.push(parseInt(num)))
-    //     console.log(res)
-    // }
-
-    // onClick () {
-    //     console.log(this.state.arr)
-    // }
-
-    // onChange (e){
-    //     this.setState({
-    //         arrText : e.target.value
-    //     })
-    //     console.log(this.state.arrText)
-    // }
-
-    // render(){
-    //     return(
-    //         <div>
-    //             <div>
-    //                 <p>Numbers here (separated by commas please) :</p>
-    //                 <input name="arrText" type="text" value={this.state.arrText} onChange={this.onChange}/>
-    //             </div>
-    //             <div>
-    //                 <button onClick={this.onClick}>Generate Array</button>
-    //             </div>
-    //         </div>
-    //     )
-    // }
     constructor(props){
         super(props);
         this.state = {
@@ -55,8 +13,6 @@ export default class Form extends React.Component{
     }
 
     onClick = async e => {
-        // this.parseArr();
-        // this.props.onSub(this.state.length,this.state.arr)
         e.preventDefault()
         var res = this.parseArr()
         if (res.length > 10 || res.length <= 1){

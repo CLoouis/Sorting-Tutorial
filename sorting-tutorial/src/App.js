@@ -14,22 +14,13 @@ export default class App extends React.Component{
       arr : [],
       arrList : []
     }
-    // this.type = ""
-    // this.arrList = []
     this.setSetup = this.setSetup.bind(this)
     this.sort = this.sort.bind(this)
     this.merge = this.merge.bind(this)
     this.mergeSort = this.mergeSort.bind(this)
-    // this.onClick = this.onClick.bind(this)
   }
 
   setSetup(sortType, array){
-    // var arr = []
-    // arr.push(array)
-    // arr.push([1,3,5])
-    // console.log(arr)
-    // this.type = sortType
-    // this.arrList = arr
     const arrayList = this.sort()
     this.setState({
       type : sortType,
@@ -70,8 +61,6 @@ export default class App extends React.Component{
     }
 
     const middle = Math.floor(arr.length / 2);
-
-    // This is where we will be dividing the array into left and right
     const left = arr.slice(0, middle);
     const right = arr.slice(middle); 
 
@@ -84,14 +73,13 @@ export default class App extends React.Component{
   merge(left, right){
     let resultArray = [], leftIndex = 0, rightIndex = 0;
 
-    // We will concatenate values into the resultArray in order
     while (leftIndex < left.length && rightIndex < right.length) {
       if (left[leftIndex] < right[rightIndex]) {
         resultArray.push(left[leftIndex]);
-        leftIndex++; // move left array cursor
+        leftIndex++; 
       } else {
         resultArray.push(right[rightIndex]);
-        rightIndex++; // move right array cursor
+        rightIndex++;
       }
     }
 
@@ -127,7 +115,7 @@ export default class App extends React.Component{
           <Header/>
           <div className = "My-content">
             <div>
-                <Form onSub={this.setSetup}/>
+              <Form onSub={this.setSetup}/>
             </div>
             <div className="box">
               <p>{displayArr === "" ? "" :"[ " + displayArr + " ]"}</p>
